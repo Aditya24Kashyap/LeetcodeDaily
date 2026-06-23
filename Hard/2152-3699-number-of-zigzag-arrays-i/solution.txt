@@ -1,0 +1,38 @@
+/* LeetCode Problem #2152: 3699. Number of ZigZag Arrays I
+ * Difficulty: Hard
+ * Topics: Dynamic Programming, Prefix Sum
+ * Language: Unknown
+ * Runtime: N/A | Memory: N/A
+ * Solved: 6/23/2026
+ */
+
+                prefUp[v + 1] = (prefUp[v] + up[i - 1][v]) % MOD;
+                prefDown[v + 1] = (prefDown[v] + down[i - 1][v]) % MOD;
+            }
+
+            for (int y = 0; y < m; y++) {
+            for (int v = 0; v < m; v++) {
+            // prefix sums for fast range queries
+            vector<int> prefUp(m + 1, 0), prefDown(m + 1, 0);
+
+            }
+        }
+
+        // Build DP for lengths 3..n
+        for (int i = 3; i <= n; i++) {
+            for (int y = 0; y < m; y++) {
+                if (x == y) continue;
+                if (x < y) up[2][y] = (up[2][y] + 1) % MOD;
+                else down[2][y] = (down[2][y] + 1) % MOD;
+    int zigZagArrays(int n, int l, int r) {
+        int m = r - l + 1;  // range size
+        // dp arrays: up[i][val], down[i][val]
+        vector<vector<int>> up(n + 1, vector<int>(m, 0));
+        vector<vector<int>> down(n + 1, vector<int>(m, 0));
+
+        // Base case: arrays of length 2
+        for (int x = 0; x < m; x++) {
+class Solution {
+public:
+    const int MOD = 1e9 + 7;
+
